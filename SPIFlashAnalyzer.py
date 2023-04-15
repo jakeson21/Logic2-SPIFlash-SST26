@@ -14,6 +14,8 @@ CONTINUE_COMMANDS = {
 
 DATA_COMMANDS = {0x03: "Read",
                  0x0b: "Fast Read",
+                 0x20: "4K Sector Erase"
+                 0xD8: "Block Erase"
                  0x5b: "Read SFDP",
                  0x6b: "Quad-Output Fast Read",
                  0x9e: "Read JEDEC ID",
@@ -27,13 +29,21 @@ EN4B = 0xB7
 EX4B = 0xE9
 CONTROL_COMMANDS = {
     0x01: "Write Status Register 1",
-    0x06: "Write Enable",
     0x04: "Write Disable",
     0x05: "Read Status Register",
+    0x06: "Write Enable",
     0x35: "Read Status Register 2",
     0x5A: "Read SFDP Mode",
     0x75: "Program Suspend",
     0xAB: "Release Power-down / Device ID",
+    0x9F: "Read JEDEC-ID"
+    0xC7: "Chip Erase"
+    0x72: "Read Block Protection Register"
+    0x42: "Write Block Protection Register"
+    0x8D: "Lock Down Block Protection Register"
+    0x98: "Global Block Protection Unlock"
+    0x88: "Read Security ID"
+    0xA5: "Program User Security ID"
     EN4B: "Enable 4 Byte Address",
     EX4B: "Exit 4 Byte Address"
 }
